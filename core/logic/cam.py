@@ -1,37 +1,45 @@
 import cv2
 
-# TODO: Let the user change the camera index
-capture = cv2.VideoCapture(-1)
+class Camera():
+    def __init__(self, cam_index, data_format):
+        self.cam_index = cam_index
+        self.data_format = data_format
+        
+    def preview(self):
+        capture = cv2.VideoCapture(self.cam_index)
 
-while(True):
-    # Capture frame by frame
-    success, frame = capture.read()
+        while(True):
+            # Capture frame by frame
+            success, frame = capture.read()
 
-    if success == False:
-        # TODO: Display a message to the user.
-        break
+            if success == False:
+                # TODO: Display an error  message to the user.
+                print("Error")
+                break
+            else:
+                return frame
+
+        capture.release()
+        
+    def capture(self):
+        if (self.data_format == "photos"):
+            capture_photo()
     
-    img = cv2.imread('../data/frame.jpg')
-    
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-capture.release()
-cv2.destroyAllWindows()
-
-def preview(camIndex):
-    capture = cv2.VideoCapture(camIndex)
-
-    while(True):
-        # Capture frame by frame
+    def capture_photo(self):
+        capture = cv2.VideoCapture(self.cam_index)
         success, frame = capture.read()
+        if (success == False):
+            # return failed message
+            print("Error: Failed to read the image.")
+        else:
+            capture.release()
+            #cv2.imwrite('../../data/frame.jpg', frame)
+            return frame
+            
+    #def capture_video(self):
+    
 
-        if success = False:
-            # TODO: Display a message to the user.
-            break
-
-        return
-
-def capture(frame, i):
-    cv2.imwrite('../../data/frame.jpg', frame)
-    return 0
+# Test
+#cam = camera(-1, "photos")
+#cam.preview()
+#cam.capture_photo()

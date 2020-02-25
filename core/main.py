@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
-def start():
+# The starting point of the program
+def program():
     app = QApplication([])
 
     window = QWidget()
@@ -10,6 +11,8 @@ def start():
     videos_btn = QPushButton('Label videos')
     layout.addWidget(photos_btn)
     layout.addWidget(videos_btn)
+
+    # On click event
     photos_btn.clicked.connect(on_photos_clicked)
     videos_btn.clicked.connect(on_videos_clicked)
 
@@ -28,6 +31,6 @@ def on_videos_clicked():
     return
     
     
-start()
+program()
 
 
