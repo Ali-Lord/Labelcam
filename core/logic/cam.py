@@ -13,7 +13,6 @@ import cv2 # Version 4.2.0
 import os
 
 # TODO: logging [What the variable and arguments holds, ..etc]
-# ISSUE: Preview stops when camera captures. (An issue for video) It happens because an inner loop is running.
 # TODO: in setup.py
 import sys
 sys.path.append(os.getcwd()[:-6])
@@ -65,20 +64,16 @@ class Camera():
             #return failed message
             #"Error: Failed to read the image."
             return False
-
-    def capture_video(self, save_path, filename):
+    
+    def capture_video_initiate(self, save_path, filename):
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
         # ISSUE: FPS is not matching the webcam FPS so the video becomes too fast.
-        out = cv2.VideoWriter(os.path.join(save_path, filename), fourcc, 24.0, (640, 480))
+        self.out = cv2.VideoWriter(os.path.join(save_path, filename), fourcc, 24.0, (640, 480))
 
-        while self.capture.isOpened():
-            success, save_frame = self.frame()
-            if success:
-                out.write(save_frame)
-                if cv2.waitKey(1) & 0xFF == ord('q'):
-                    break
-            else:
-                # Error message
-                break
-        out.release()
-
+    def capture_video_begin(self, frame):
+        if self.capture.isOpened():           
+            print("Saving frame..")
+            self.out.write(frame)
+    
+    def capture_video_end(self):
+        self.out.release()

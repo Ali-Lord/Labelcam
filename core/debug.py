@@ -15,11 +15,13 @@ import cv2
 from common.data_format_enum import DataFormat
 
 camera = Camera(-1, DataFormat.photo)
+should_capture_video = False
+title = "Preview"
 
 while(True):
-    success, preview_frame = camera.frame()
+    success, frame = camera.frame()
     if success:
-        cv2.imshow("Preview", preview_frame)
+        cv2.imshow(title, frame)
     else:
         print("Failed!")
         break
@@ -36,9 +38,23 @@ while(True):
             print("Saved.")
         else:
             print("Failed.")
-    elif k == ord('v'):
-        #sucess = print("Not yet, honey.")
-        camera.capture_video("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+    elif k == ord('v') and should_capture_video == False:   
+        print("recording")
+        should_capture_video = True
+        cv2.destroyAllWindows()  
+        title = "Recording.."
+        camera.capture_video_initiate("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+
+    elif k == ord('q') and should_capture_video == True:
+        print("Recording ended.")
+        should_capture_video = False
+        camera.capture_video_end()
+        cv2.destroyAllWindows()
+        title = "Preview"
+
+    if should_capture_video:
+        camera.capture_video_begin(frame)
+
         
 
 camera.end_process()
