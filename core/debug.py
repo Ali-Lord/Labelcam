@@ -43,7 +43,9 @@ while(True):
         should_capture_video = True
         cv2.destroyAllWindows()  
         title = "Recording.."
-        camera.capture_video_initiate("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+        #camera.capture_video_initiate("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+        camera.capture("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+
 
     elif k == ord('q') and should_capture_video == True:
         print("Recording ended.")

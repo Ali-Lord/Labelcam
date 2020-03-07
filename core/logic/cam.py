@@ -47,13 +47,6 @@ class Camera():
         # TODO: Check if the capture is released or not first.
         self.capture.release()
 
-    # Takes photo or video depending on data_format.
-    def capture(self, save_path, filename):
-        if self.data_format == DataFormat.photo:
-            capture_photo(save_path)
-        else:
-            capture_video(save_path)
-
     def capture_photo(self, save_path, filename):
         success, save_frame = self.frame()
 
