@@ -1,0 +1,10 @@
+INFO:root:Debug program has started.
+INFO:root:cam.py loaded.
+INFO:root:Camera index is -1. [__init__() from Camera() in cam.py]
+INFO:root:The save path is: /home/ali/Projects/Labelcam/tmp/test.jpg [capture_photo() from Camera() in cam.py]
+INFO:root:The save path is: /home/ali/Projects/Labelcam/tmp/test.avi [capture_video_initiate() from Camera() in cam.py]
+INFO:root:Releasing.. [capture_video_end() from Camera() in cam.py]
+INFO:root:Released. [capture_video_end() from Camera() in cam.py]
+INFO:root:Releasing.. [end_process() from Camera() in cam.py]
+INFO:root:Released. [end_process() from Camera() in cam.py]
+INFO:root:Debug program has ended.

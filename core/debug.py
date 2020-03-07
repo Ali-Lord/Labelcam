@@ -1,20 +1,30 @@
 '''
 Original author: Ali Raz (Mohammad Saif Ali)
 Created: 22.02.2020
-Last modified: 06.03.2020
+Last modified: 08.03.2020
 
 This code is licenced under MIT Licence.
 
 Description:
     All the debugging codes will be here.
 '''
+import logging
+from datetime import datetime
+import os
+now = datetime.now()
+datetime_neat_string = now.strftime("%d-%m-%Y_%Hh%Mm%Ss")
+log_filename = datetime_neat_string + "_debug.log"
+save_log_path = '../logs/' + log_filename
 
-# Preview, capture photo and capture video.
+logging.basicConfig(filename = save_log_path, level=logging.INFO)
+logging.info("Debug program has started.")
+
+
+# Debug: Preview, capture photo and capture video.
 from logic.cam import Camera
 import cv2
-from common.data_format_enum import DataFormat
 
-camera = Camera(-1, DataFormat.photo)
+camera = Camera(-1)
 should_capture_video = False
 title = "Preview"
 
@@ -43,10 +53,8 @@ while(True):
         should_capture_video = True
         cv2.destroyAllWindows()  
         title = "Recording.."
-        #camera.capture_video_initiate("/home/ali/Projects/Labelcam/tmp/", "test.avi")
-        camera.capture("/home/ali/Projects/Labelcam/tmp/", "test.avi")
-
-
+        camera.capture_video_initiate("/home/ali/Projects/Labelcam/tmp/", "test.avi")
+        
     elif k == ord('q') and should_capture_video == True:
         print("Recording ended.")
         should_capture_video = False
@@ -61,3 +69,4 @@ while(True):
 
 camera.end_process()
 cv2.destroyAllWindows()
+logging.info("Debug program has ended.")
