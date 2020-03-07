@@ -1,0 +1,339 @@
+Python 3.8.1 (default, Feb 22 2020, 22:31:44) 
+[GCC 9.2.1 20200203] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> python.el: native completion setup loaded
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 13, in <module>
+    from ..common.data_format_enum import DataFormat
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 13, in <module>
+    from ...common.data_format_enum import DataFormat
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 13
+    from ...common import data_format_enum.DataFormat
+                                          ^
+SyntaxError: invalid syntax
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 13, in <module>
+    from ...common import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 13, in <module>
+    from ..common import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 14, in <module>
+    print(sys.path())
+TypeError: 'list' object is not callable
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 14, in <module>
+    print(sys.path()[1])
+TypeError: 'list' object is not callable
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 14, in <module>
+    print(sys.path()[1])
+TypeError: 'list' object is not callable
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 14, in <module>
+    print(sys.path()[0])
+TypeError: 'list' object is not callable
+>>> ['', '/home/ali/Projects/Labelcam/env/lib/python38.zip', '/home/ali/Projects/Labelcam/env/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/lib-dynload', '/home/ali/.pyenv/versions/3.8.1/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/site-packages']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ..common import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> ['', '/home/ali/Projects/Labelcam/env/lib/python38.zip', '/home/ali/Projects/Labelcam/env/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/lib-dynload', '/home/ali/.pyenv/versions/3.8.1/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/site-packages']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 61, in <module>
+    cv2.imshow("Preview", camera.frame())
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ..common import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15
+    from .. import common.data_format_enum
+                         ^
+SyntaxError: invalid syntax
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import common
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ... import common
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .... import common
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .... import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ... import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from . import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from . import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ... import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ... import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. app import MainWindow
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from core import app
+ModuleNotFoundError: No module named 'core'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from common import data_format_enum
+ModuleNotFoundError: No module named 'common'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from core import data_format_enum
+ModuleNotFoundError: No module named 'core'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ..  import data_format_enum
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from ..  import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 15, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> sys.path.append('core')
+>>> print(sys.path)
+['', '/home/ali/Projects/Labelcam/env/lib/python38.zip', '/home/ali/Projects/Labelcam/env/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/lib-dynload', '/home/ali/.pyenv/versions/3.8.1/lib/python3.8', '/home/ali/Projects/Labelcam/env/lib/python3.8/site-packages', 'core']
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17
+    import app
+    ^
+IndentationError: unexpected indent
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    import app
+ModuleNotFoundError: No module named 'app'
+>>> sys.path.append('/
+  File "<stdin>", line 1
+    sys.path.append('/
+                     ^
+SyntaxError: EOL while scanning string literal
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from core import app
+ModuleNotFoundError: No module named 'core'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from core import app
+ModuleNotFoundError: No module named 'core'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    import app
+ModuleNotFoundError: No module named 'app'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from ... import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .... import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .... import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from ... import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from . import core
+ImportError: attempted relative import with no known parent package
+>>> import core
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'core'
+>>> import app
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'app'
+>>> pwd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'pwd' is not defined
+>>> pwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'pwd' is not defined
+>>> sys.pwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'sys' has no attribute 'pwd'
+>>> sys.path.pwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'pwd'
+>>> os.pwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'os' has no attribute 'pwd'
+>>> import os
+>>> os.pwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'os' has no attribute 'pwd'
+>>> os.pwd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'os' has no attribute 'pwd'
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from . import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import core
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from . import app
+ImportError: attempted relative import with no known parent package
+>>> __file__
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name '__file__' is not defined
+>>> print('__file__={0:<35} | __name__={1:<20} | __package__={2:<20}'.format(__file__,__name__,str(__package__)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name '__file__' is not defined
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from . import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from . import app
+ImportError: attempted relative import with no known parent package
+>>> Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ali/Projects/Labelcam/core/logic/cam.py", line 17, in <module>
+    from .. import app
+ImportError: attempted relative import with no known parent package
+>>> os.curdir
+'.'
+>>> os.curdir
+'.'
+>>> os.path
+<module 'posixpath' from '/home/ali/Projects/Labelcam/env/lib/python3.8/posixpath.py'>
+>>> print(os.path)

@@ -12,28 +12,54 @@ class Preview:
     def __init__(self, cam_index):
         self.cam_index = cam_index
 
-    def get_preview(self, QMainWindow):
-        label = QLabel(QMainWindow)
+    def set_preview(self, QMainWindow):
+        self.label = QLabel(QMainWindow)
         
-        camera = Camera(-1, "photos")
-        frame = camera.capture_photo()
+        self.camera = Camera(-1, "photos")
+        frame = self.camera.start_preview()
 
         # Converting numpy.ndarray to QPixmap
         height, width, channel = frame.shape
         bytes_per_line = 3 * width
-        processed_frame = QImage(frame.data, width, height, bytes_per_line, QImage.Format_BGR888)
+        processed_frame = QImage(frame.data,
+                                 width,
+                                 height,
+                                 bytes_per_line,
+                                 QImage.Format_BGR888)
         pixmap = QPixmap(processed_frame)
         
-        label.setPixmap(pixmap)
-        label.setAlignment(Qt.AlignCenter)  
+        self.label.setPixmap(pixmap)
+        self.label.setAlignment(Qt.AlignCenter)  
         
-        return label
+        return self.label
+
+    def refresh_preview(self):
+        self.camera = Camera(-1, "photos")
+        frame = self.camera.start_preview()
+
+        # Converting numpy.ndarray to QPixmap
+        height, width, channel = frame.shape
+        bytes_per_line = 3 * width
+        processed_frame = QImage(frame.data,
+                                 width,
+                                 height,
+                                 bytes_per_line,
+                                 QImage.Format_BGR888)
+        pixmap = QPixmap(processed_frame)
+        
+        return pixmap
     
     def set_cam_index(self, cam_index):
         self.cam_index = cam_index
 
     def get_cam_index(self):
         return self.cam_index
+
+    def stop_preview(self):
+        self.camera.stop_preview()
+
+    def init_preview(self):
+        self.camera.init_preview()
         
         
     
